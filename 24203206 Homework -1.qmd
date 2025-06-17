@@ -39,7 +39,7 @@ str(sleep)
 
 ## Plot
 
-form @fig-box we can see that group 2 medicine is performing better than group 1 as on average the increase in sleep is more in group 2
+From @fig-box we can see that group 2 medicine is performing better than group 1 as on average the increase in sleep is more in group 2
 
 ```{r}
 #| label: fig-box
