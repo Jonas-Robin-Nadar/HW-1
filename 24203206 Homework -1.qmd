@@ -1,0 +1,52 @@
+---
+title: "24203206 Homework -1"
+author: "Jonas Robin Nadar|24203206"
+format: pdf
+editor: visual
+execute:
+  warning: false  
+  error: false    
+  message: false
+  echo: false
+---
+
+```{r}
+#Loading Libraries
+library(ggplot2)
+```
+
+## Introduction {#sec-introduction style="color: purple"}
+
+The \`sleep\` dataset in R shows the effect of two soporific drugs *(increase in hours of sleep compared to control)* on 10 patients.
+
+## Dataset Overview {#sec-dataset-overview style="color: purple"}
+
+The dataset has 20 rows and 3 columns
+
+| Column Name | Type    | Description                |
+|-------------|---------|----------------------------|
+| extra       | numeric | increase in hours of sleep |
+| group       | factor  | drug given                 |
+| ID          | factor  | patient ID                 |
+
+**NOTE:** The `group` variable name may be misleading about the data: [*They represent measurements on 10 persons, not in groups.*]{.underline}
+
+```{r}
+#Loading the Data
+data(sleep)
+str(sleep)
+```
+
+## Plot
+
+form @fig-box we can see that group 2 medicine is performing better than group 1 as on average the increase in sleep is more in group 2
+
+```{r}
+#| label: fig-box
+#| fig-cap: "Box plot of increase in sleep duration across different drug groups"
+#| fig-width: 8
+#| fig-height: 5
+ggplot(sleep, aes(x = group, y = extra, fill = group)) + geom_boxplot() + labs(title = "Increase in Sleep Duration by Drug Group", x = "Drug Group", y = "Increase in Sleep (Hours)") + theme_minimal()
+```
+
+### 
