@@ -49,4 +49,6 @@ From @fig-box we can see that group 2 medicine is performing better than group 1
 ggplot(sleep, aes(x = group, y = extra, fill = group)) + geom_boxplot() + labs(title = "Increase in Sleep Duration by Drug Group", x = "Drug Group", y = "Increase in Sleep (Hours)") + theme_minimal()
 ```
 
-### 
+### Summary
+
+The box plot shows that the second drug generally leads to a greater increase in sleep duration. Although there's overlap, the median and overall distribution suggest better efficacy from drug group 2.
